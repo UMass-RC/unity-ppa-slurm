@@ -14,7 +14,7 @@ ifneq ($(DEB_TARGET_ARCH_BITS),64)
 endif
 
 %:
-	dh $@ --builddirectory
+	dh $@ --builddirectory --with-systemd
 
 override_dh_auto_clean:
 	dh_auto_clean
@@ -138,8 +138,5 @@ override_dh_auto_test:
 override_dh_compress:
 	dh_compress -X.pdf -X.ttf
 
-override_dh_systemdenable:
-	echo "Not enabling services"
-
-override_dh_systemdstart:
-	echo "Not starting services"
+override_dh_installsystemd:
+	dh_installsystemd --no-start --no-enable

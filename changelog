@@ -1,5 +1,8 @@
 slurm-wlm (20.02.7-0ubuntu2) focal; urgency=medium
 
+  * Removed init.d scripts
+  * Removed .default files which go with init.d scripts
+  * Switched to using systemd (--with-systemd added to rules)
   * disabled autostart and autoenable for services
 
  -- Hakan Saplakoglu <hakansaplakog@gmail.com>  Thu, 21 Jul 2022 17:34:41 -0400
