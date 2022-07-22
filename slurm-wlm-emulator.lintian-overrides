@@ -1,0 +1,2 @@
+slurm-wlm-emulator: hardening-no-bindnow
+slurm-wlm-emulator: binary-or-shlib-defines-rpath
